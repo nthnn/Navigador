@@ -2,14 +2,14 @@
 #define NAVIGADOR_H
 
 #include <Arduino.h>
-#include <List.h>
+#include <List.hpp>
 
 enum NavigadorDirection {
     NAVIGADOR_FORWARD_DIRECTION,
     NAVIGADOR_BACKWARD_DIRECTION,
     NAVIGADOR_LEFT_DIRECTION,
     NAVIGADOR_RIGHT_DIRECTION,
-}
+};
 
 struct NavigadorPathStruct {
     uint8_t direction;

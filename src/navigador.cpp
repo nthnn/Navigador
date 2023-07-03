@@ -77,11 +77,11 @@ void Navigador::stop() {
 }
 
 void Navigador::add_path(NavigadorPath path) {
-    this->path_list.push_back(path);
+    this->path_list.add(path);
 }
 
 void Navigador::remove_path(NavigadorPath path) {
-    for(size_t i = 0; i < this->path_list.size(); i++)
+    for(size_t i = 0; i < this->path_list.getSize(); i++)
         if(this->path_list[i].direction == path.direction &&
             this->path_list[i].travel_duration == path.travel_duration) {
             this->path_list.remove(i);
@@ -90,7 +90,9 @@ void Navigador::remove_path(NavigadorPath path) {
 }
 
 void Navigador::follow_path() {
-    for(auto path : this->path_list) {
+    for(int i = 0; i < this->path_list.getSize(); i++) {
+        NavigadorPath path = this->path_list[i];
+
         switch(path.direction) {
             case NAVIGADOR_FORWARD_DIRECTION:
                 this->forward();
