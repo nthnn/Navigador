@@ -1,5 +1,5 @@
 {
-    "name": "Anomalia",
+    "name": "Navigador",
     "version": "1.0.0",
     "description": "Arduino library for dual DC motor navigation.",
     "keywords": "Navigation, DC motors, L293D, Robotics",
